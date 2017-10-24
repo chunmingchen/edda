@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['out_5fof_5fbound',['OUT_OF_BOUND',['../namespaceedda.html#aa0433980f2b7cbba42ff2234832b9716af6f7fba99d195f9df03aa3440a26e3b5',1,'edda']]]
+  ['hist',['HIST',['../namespaceedda.html#af8b59ad1295703ca81468f182b9c7fd7a6e917340f74c567e73e3afda120e206e',1,'edda']]],
+  ['hybrid',['HYBRID',['../namespaceedda.html#af8b59ad1295703ca81468f182b9c7fd7a07b98b2333d2fff7e7fa92da24d4bc54',1,'edda']]]
 ];

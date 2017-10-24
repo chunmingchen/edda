@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ucgridphy2comp',['UCGridPhy2Comp',['../grid_8h.html#ad7352884ed931142171b2bbfc9849f59',1,'grid.h']]]
+  ['ijk_5fto_5fidx',['IJK_TO_IDX',['../level__crossing__prob_8h.html#a1b9a61d5870ac595d332e99b4e808637',1,'level_crossing_prob.h']]]
 ];

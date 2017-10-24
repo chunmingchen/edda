@@ -1,15 +1,8 @@
 var searchData=
 [
-  ['edda_2eh',['edda.h',['../edda_8h.html',1,'']]],
-  ['edda_5fexport_2eh',['edda_export.h',['../edda__export_8h.html',1,'']]],
-  ['eddarandomprobefilter_2ecpp',['eddaRandomProbeFilter.cpp',['../eddaRandomProbeFilter_8cpp.html',1,'']]],
-  ['eddarandomprobefilter_2eh',['eddaRandomProbeFilter.h',['../eddaRandomProbeFilter_8h.html',1,'']]],
-  ['eddarandomsamplefield_2ecpp',['eddaRandomSampleField.cpp',['../eddaRandomSampleField_8cpp.html',1,'']]],
-  ['eddarandomsamplefield_2eh',['eddaRandomSampleField.h',['../eddaRandomSampleField_8h.html',1,'']]],
-  ['eddasamplingarray_2ecpp',['eddaSamplingArray.cpp',['../eddaSamplingArray_8cpp.html',1,'']]],
-  ['eddasamplingarray_2eh',['eddaSamplingArray.h',['../eddaSamplingArray_8h.html',1,'']]],
-  ['eddathreshold_2ecpp',['eddaThreshold.cpp',['../eddaThreshold_8cpp.html',1,'']]],
-  ['eddathreshold_2eh',['eddaThreshold.h',['../eddaThreshold_8h.html',1,'']]],
-  ['eddauncertainisocontour_2ecpp',['eddaUncertainIsocontour.cpp',['../eddaUncertainIsocontour_8cpp.html',1,'']]],
-  ['eddauncertainisocontour_2eh',['eddaUncertainIsocontour.h',['../eddaUncertainIsocontour_8h.html',1,'']]]
+  ['dataset_2eh',['dataset.h',['../dataset_8h.html',1,'']]],
+  ['distr_5farray_2eh',['distr_array.h',['../distr__array_8h.html',1,'']]],
+  ['distribution_2eh',['distribution.h',['../distribution_8h.html',1,'']]],
+  ['distribution_5ftag_2eh',['distribution_tag.h',['../distribution__tag_8h.html',1,'']]],
+  ['distributionmodeler_2eh',['distributionModeler.h',['../distributionModeler_8h.html',1,'']]]
 ];

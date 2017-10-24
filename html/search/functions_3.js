@@ -1,15 +1,13 @@
 var searchData=
 [
-  ['cartesiangrid',['CartesianGrid',['../classedda_1_1CartesianGrid.html#a1942381db5e2825ac62960dbe333f035',1,'edda::CartesianGrid::CartesianGrid(int xdim, int ydim, int zdim)'],['../classedda_1_1CartesianGrid.html#af59ed87c760524442d7f273212e03bc1',1,'edda::CartesianGrid::CartesianGrid()']]],
-  ['cast',['cast',['../classedda_1_1Tuple.html#a573a869c415b5881da83c9a35dd4cc10',1,'edda::Tuple']]],
-  ['cellvolume',['cellVolume',['../classedda_1_1Grid.html#a226725af5b61a11b52d97e66ea899703',1,'edda::Grid::cellVolume()'],['../classedda_1_1CartesianGrid.html#ac7fd54a60214a297fb5ea0428e75c522',1,'edda::CartesianGrid::cellVolume()'],['../classedda_1_1RegularCartesianGrid.html#a466ddf48fea9cfa189384960df43931b',1,'edda::RegularCartesianGrid::cellVolume()']]],
-  ['clamp',['clamp',['../classedda_1_1Vector.html#a51a82f3e95eb87bf98aaa26f3d2bd03a',1,'edda::Vector::clamp()'],['../classedda_1_1Vector_3_01Real_00_014_01_4.html#a08f179cb06c5aae652a49b02c65fd941',1,'edda::Vector&lt; Real, 4 &gt;::clamp()']]],
-  ['clearlookup',['ClearLookup',['../classvtkSamplingArray.html#ac89f082a67c20a0d317622d5c64f4e18',1,'vtkSamplingArray::ClearLookup()'],['../classeddaSamplingArray.html#a8836ff715cad39c5d9244a267e8ef3d1',1,'eddaSamplingArray::ClearLookup()']]],
-  ['compute',['Compute',['../classeddaUncertainIsocontour.html#a63962b7bbddb0b53803b5f722a736a1d',1,'eddaUncertainIsocontour::Compute()'],['../classedda_1_1StreamTracer.html#adbbf6510363f650089804bd2a45d0f88',1,'edda::StreamTracer::compute()']]],
-  ['computebbox',['computeBBox',['../classedda_1_1Grid.html#a538c4f44fa3b37c892705f02475ba568',1,'edda::Grid::computeBBox()'],['../classedda_1_1RegularCartesianGrid.html#ac26c70ad564400a15ef51ad1a5489c59',1,'edda::RegularCartesianGrid::computeBBox()']]],
-  ['computestreamlines',['computeStreamlines',['../streamlineGaussianVTK_8cpp.html#afa66efa39eeccf7b9bc62e6302b30d46',1,'computeStreamlines(vtkSmartPointer&lt; vtkPolyData &gt; vtk_seeds):&#160;streamlineGaussianVTK.cpp'],['../streamlineMonteCarlo_8cpp.html#afa66efa39eeccf7b9bc62e6302b30d46',1,'computeStreamlines(vtkSmartPointer&lt; vtkPolyData &gt; vtk_seeds):&#160;streamlineMonteCarlo.cpp'],['../test__vtk__pipeline_8cpp.html#ac594a54429651d60641a73ca31217c1b',1,'computeStreamlines(vtkObject *caller, unsigned long eventId, void *clientdata, void *calldata):&#160;test_vtk_pipeline.cpp']]],
-  ['copy_5fto_5fhost',['copy_to_host',['../classedda_1_1NdArray.html#a06aa8bcd9b22c81d43a4f32b43f9a7e1',1,'edda::NdArray::copy_to_host(OutputIterator out)'],['../classedda_1_1NdArray.html#a06aa8bcd9b22c81d43a4f32b43f9a7e1',1,'edda::NdArray::copy_to_host(OutputIterator out)']]],
-  ['createdefaultexecutive',['CreateDefaultExecutive',['../classvtkCompositeUncertainIsocontour.html#a05e48e9f4970fa0ae87b51707fe7bfa0',1,'vtkCompositeUncertainIsocontour']]],
-  ['cross',['cross',['../namespaceedda.html#afeb533ece9d7f2447ee12393696a5ffb',1,'edda']]],
-  ['cubelerp',['cubeLerp',['../namespaceedda.html#a02b3b3fb6f033d50cda9fbbe40358a04',1,'edda']]]
+  ['data',['data',['../classedda_1_1NdArray.html#adab41970261227bb8cbee61437668836',1,'edda::NdArray']]],
+  ['datachanged',['DataChanged',['../classeddaSamplingArray.html#a3a62c7477232aeb406a32069ca26198a',1,'eddaSamplingArray']]],
+  ['dataset',['Dataset',['../classedda_1_1Dataset.html#a298506475496c892c0269643dced7e0f',1,'edda::Dataset']]],
+  ['det',['det',['../classedda_1_1MATRIX3.html#af2af932e00c6550a38487cea6bddfb09',1,'edda::MATRIX3']]],
+  ['determinant',['determinant',['../namespaceedda.html#a3238989f3e09702c057659bfce848d99',1,'edda']]],
+  ['determinant_5fsign',['determinant_sign',['../namespaceedda.html#ac74aafc0aebbdea9b454c51915fc09f6',1,'edda']]],
+  ['dimension',['Dimension',['../classedda_1_1MATRIX3.html#a314381814825aedf7dca2f682f5a200a',1,'edda::MATRIX3']]],
+  ['distributionmodeler',['DistributionModeler',['../classedda_1_1DistributionModeler.html#a3de1ac390bc65ff36b79a39309977e6b',1,'edda::DistributionModeler']]],
+  ['distributionwrapper',['DistributionWrapper',['../classedda_1_1dist_1_1DistributionWrapper.html#aa883c36befbaa6da37f0c87449dd7b97',1,'edda::dist::DistributionWrapper']]],
+  ['dot',['dot',['../namespaceedda.html#ac6eb0fa147f28e44295bbe3201c0281e',1,'edda::dot(const Vector3&lt; Real &gt; &amp;v0, const Vector3&lt; Real &gt; &amp;v1)'],['../namespaceedda.html#acbc60ac78a9972a32aa4a470f9174087',1,'edda::dot(const Vector4&lt; Real &gt; &amp;v0, const Vector4&lt; Real &gt; &amp;v1)']]]
 ];

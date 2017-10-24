@@ -1,12 +1,8 @@
 var searchData=
 [
-  ['variant',['Variant',['../structedda_1_1dist_1_1Variant.html',1,'edda::dist']]],
-  ['vector',['Vector',['../classedda_1_1Vector.html',1,'edda']]],
-  ['vector_3c_20real_2c_203_20_3e',['Vector&lt; Real, 3 &gt;',['../classedda_1_1Vector_3_01Real_00_013_01_4.html',1,'edda']]],
-  ['vector_3c_20real_2c_204_20_3e',['Vector&lt; Real, 4 &gt;',['../classedda_1_1Vector_3_01Real_00_014_01_4.html',1,'edda']]],
-  ['vectorarray',['VectorArray',['../classedda_1_1VectorArray.html',1,'edda']]],
-  ['vtkcompositeuncertainisocontour',['vtkCompositeUncertainIsocontour',['../classvtkCompositeUncertainIsocontour.html',1,'']]],
-  ['vtkeddareader',['vtkEddaReader',['../classvtkEddaReader.html',1,'']]],
-  ['vtksamplingarray',['vtkSamplingArray',['../classvtkSamplingArray.html',1,'']]],
-  ['vtkvectorofarrays',['vtkVectorOfArrays',['../classeddaRandomProbeFilter_1_1vtkVectorOfArrays.html',1,'eddaRandomProbeFilter']]]
+  ['scalardistrarray',['ScalarDistrArray',['../classedda_1_1ScalarDistrArray.html',1,'edda']]],
+  ['shared_5fary',['shared_ary',['../classedda_1_1shared__ary.html',1,'edda']]],
+  ['shared_5fary_3c_20distr_20_3e',['shared_ary&lt; Distr &gt;',['../classedda_1_1shared__ary.html',1,'edda']]],
+  ['shared_5fary_3c_20edda_3a_3avector_3c_20distr_2c_20n_20_3e_20_3e',['shared_ary&lt; edda::Vector&lt; Distr, N &gt; &gt;',['../classedda_1_1shared__ary.html',1,'edda']]],
+  ['streamtracer',['StreamTracer',['../classedda_1_1StreamTracer.html',1,'edda']]]
 ];

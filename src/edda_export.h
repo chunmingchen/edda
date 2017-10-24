@@ -5,7 +5,7 @@
 #ifndef EDDA_EXPORT_H_
 #define EDDA_EXPORT_H_
 
-//#include "edda.h"
+#include "edda.h"
 
 // Defines EDDA_EXPORT so that functionality implemented by
 // the edda library can be exported to consumers.

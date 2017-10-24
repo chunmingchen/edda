@@ -21,7 +21,7 @@ namespace edda {
 const int kNdArrayMaxDims = 8;
 
 ///
-/// \breif A general n-dimensional array compatible to Cuda
+/// \brief A general n-dimensional array compatible to Cuda
 ///
 template <typename Type>
 class NdArray {

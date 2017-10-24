@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['array',['array',['../classedda_1_1DataSamplingArray.html#add60cf9f9b32583645e42aef99d96ca0',1,'edda::DataSamplingArray::array()'],['../classedda_1_1ScalarArray.html#a3f18a060b5cac5e110bf9687e0720b03',1,'edda::ScalarArray::array()'],['../classedda_1_1VectorArray.html#a65929b542b0a1b1d35e9f7af8ac3c690',1,'edda::VectorArray::array()']]],
+  ['array',['array',['../classedda_1_1ScalarDistrArray.html#af14704b6796513e744fde185226132b8',1,'edda::ScalarDistrArray::array()'],['../classedda_1_1VectorDistrArray.html#a167fecce5d4dfcf8288d9c23ba5c5264',1,'edda::VectorDistrArray::array()'],['../classedda_1_1JointDistrArray.html#aad8819cabc65d140d4d16e31e980b60f',1,'edda::JointDistrArray::array()']]],
   ['arrays',['arrays',['../classedda_1_1GmmVtkDataArray.html#a76c34511771f4c4932782fa649c69df1',1,'edda::GmmVtkDataArray']]]
 ];

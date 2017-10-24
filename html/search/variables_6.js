@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['kndarraymaxdims',['kNdArrayMaxDims',['../namespaceedda.html#a34a02e3b4884d34500d553916a6015ff',1,'edda']]]
+  ['gaus',['gaus',['../classedda_1_1dist_1_1JointGMM.html#a9d7ba4b30097b161f2474b48b04b672d',1,'edda::dist::JointGMM']]]
 ];

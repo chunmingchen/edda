@@ -8,32 +8,42 @@ cmake_minimum_required (VERSION 2.8)
 project (edda)
 
 ### Provide options that the user can optionally select.
+option (EDDA_BUILD_VIS "Build distribution vis tools." OFF)
+
 option (EDDA_BUILD_TESTS "Build the test programs." OFF)
 option (EDDA_BUILD_EXAMPLES "Build the example programs." ON)
-option (EDDA_BUILD_SHARED_LIBS "Build into shared libraries." ON)
-option (EDDA_BUILD_PARAVIEW_PLUGINS "Build Paraview Plugins." OFF)
-option (EDDA_WITH_VTK "Build with VTK integration." OFF)
+option (EDDA_BUILD_SHARED_LIBS "Build into shared libraries." OFF)
 #option (EDDA_WITH_OPENMP "Build with OpenMP parallelization." ON)
 
-set (THRUST_DEVICE_SYSTEM "CUDA" CACHE STRING "Thrust device backend (CUDA/TBB/OPENMP/CPP).")
+set (THRUST_DEVICE_SYSTEM "CPP" CACHE STRING "Thrust device backend (CUDA/TBB/OPENMP/CPP).")
 set_property(CACHE THRUST_DEVICE_SYSTEM PROPERTY STRINGS "CUDA;TBB;OPENMP;CPP")
 ###
 
-# Tell the compiler to use C++11.
-include(CheckCXXCompilerFlag)
-CHECK_CXX_COMPILER_FLAG("-std=c++11" COMPILER_SUPPORTS_CXX11)
-CHECK_CXX_COMPILER_FLAG("-std=c++0x" COMPILER_SUPPORTS_CXX0X)
-if(COMPILER_SUPPORTS_CXX11)
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
-elseif(COMPILER_SUPPORTS_CXX0X)
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x")
-else()
-    message(WARNING "The compiler ${CMAKE_CXX_COMPILER} has no C++11 support. Please use a different C++ compiler.")
+# VTK integration
+find_package(VTK)
+include (${VTK_USE_FILE})
+list(APPEND LINK_LIBS ${VTK_LIBRARIES})
+
+
+# Tell the compiler to use C++11, if not using Visual Studio.
+if (NOT MSVC)
+    include(CheckCXXCompilerFlag)
+    CHECK_CXX_COMPILER_FLAG("-std=c++11" COMPILER_SUPPORTS_CXX11)
+    CHECK_CXX_COMPILER_FLAG("-std=c++0x" COMPILER_SUPPORTS_CXX0X)
+    if(COMPILER_SUPPORTS_CXX11)
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+    elseif(COMPILER_SUPPORTS_CXX0X)
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x")
+    else()
+        message(WARNING "The compiler ${CMAKE_CXX_COMPILER} has no C++11 support. Please use a different C++ compiler.")
+    endif()
 endif()
 
 
 # All warnings on
 #set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  -Wall)
+
+set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  -fext-numeric-literals")
 
 
 # Load settings for the boost project.
@@ -41,7 +51,11 @@ find_package (Boost REQUIRED)
 if (Boost_FOUND)
   include_directories (${Boost_INCLUDE_DIRS})
   link_libraries (${Boost_LIBRARIES})
+  
+else ()
+set ( BOOST_ROOT "/usr/local" CACHE PATH "the root directory containing Boost")
 endif ()
+set ( BOOST_ROOT "/usr/local" CACHE PATH "the root directory containing Boost")
 
 # default CUDA off
 set(EDDA_BUILD_WITH_CUDA OFF)
@@ -128,39 +142,11 @@ else ()
     set(LIB_TYPE STATIC)
 endif ()
 
+# for examples
+add_definitions(-DSAMPLE_DATA_PATH="${CMAKE_SOURCE_DIR}/sample_data/")
 
-# Choose either Paraview or VTK library
-if (EDDA_BUILD_PARAVIEW_PLUGINS)
-  find_package(ParaView REQUIRED)
-  include(${PARAVIEW_USE_FILE})
-  list(APPEND LINK_LIBS ${VTK_LIBRARIES})
-
-elseif (EDDA_WITH_VTK )
-  # VTK integration
-  find_package(VTK)
-  include (${VTK_USE_FILE})
-  list(APPEND LINK_LIBS ${VTK_LIBRARIES})
-
-endif ()
-
-
-#################### VTK fix for Cuda #######################
-macro(REMOVE_VTK_DEFINITIONS)
-    get_directory_property(_dir_defs DIRECTORY ${CMAKE_SOURCE_DIR} COMPILE_DEFINITIONS)
-    set(_vtk_definitions)
-    foreach(_item ${_dir_defs})
-        if(_item MATCHES "vtk*")
-            list(APPEND _vtk_definitions -D${_item})
-        endif()
-    endforeach()
-    remove_definitions(${_vtk_definitions})
-endmacro(REMOVE_VTK_DEFINITIONS)
-
-if (EDDA_BUILD_PARAVIEW_PLUGINS OR EDDA_WITH_VTK)
-    REMOVE_VTK_DEFINITIONS()
-endif ()
-
-
+##############################################
+# sources
 
 # Make the configuration file.
 configure_file ("${PROJECT_SOURCE_DIR}/edda.h.in"
@@ -172,6 +158,13 @@ include_directories ("${PROJECT_SOURCE_DIR}/src")
 # Add the src subdirectory to the build.
 add_subdirectory (src)
 
+##############################################
+# tools
+
+if (EDDA_BUILD_VIS)
+  add_subdirectory (vis)
+endif ()
+
 # If EDDA_BUILD_TESTS is on, enable testing.
 if (EDDA_BUILD_TESTS)
   enable_testing ()
@@ -182,4 +175,3 @@ endif ()
 if (EDDA_BUILD_EXAMPLES)
   add_subdirectory (examples)
 endif ()
-

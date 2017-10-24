@@ -6,10 +6,11 @@
 #define NRRD_H_
 
 #include "common.h"
+#include "edda_export.h"
 
 namespace edda {
 
-ReturnStatus write_nrrd_3d(const char *nrrd_fname, const char *raw_fname,
+ReturnStatus EDDA_EXPORT write_nrrd_3d(const char *nrrd_fname, const char *raw_fname,
                            int w, int h, int d, const char *type);
 
 }  // namespace edda

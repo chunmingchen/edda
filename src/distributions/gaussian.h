@@ -5,15 +5,15 @@
 #ifndef DIST_GAUSSIAN_H_
 #define DIST_GAUSSIAN_H_
 
-
-#include <cmath>
 #include <cstdlib>
 #include <iostream>
+#define _USE_MATH_DEFINES  // For Visual Studio
+#include <math.h>
 
 #include <boost/math/distributions.hpp>
 #include <thrust/random.h>
 
-#include "distribution.h"
+#include "distribution_tag.h"
 #include "core/statistics.h"
 
 namespace edda {
@@ -23,13 +23,13 @@ namespace dist {
 ///
 /// \brief Defines a Gaussian class
 ///
-struct EDDA_EXPORT Gaussian: public ContinuousDistribution {
-  Real mean, var;
+struct EDDA_EXPORT Gaussian: public ContinuousDistributionTag {
+  Real mean, sd;
   // constructor
   __host__ __device__
   Gaussian(): Gaussian(0, (Real)1.) {}
   __host__ __device__
-  Gaussian(Real m, Real var): mean(m), var(var) { }
+  Gaussian(Real m, Real s): mean(m), sd(s) { }
 
 };
 
@@ -51,7 +51,7 @@ inline double getMean(const Gaussian &dist)
 __host__ __device__
 inline double getVar(const Gaussian &dist)
 {
-    return (double) dist.var;
+    return (double) (dist.sd * dist.sd);
 }
 
 ///
@@ -60,10 +60,13 @@ inline double getVar(const Gaussian &dist)
 __host__ __device__
 inline double getPdf(const Gaussian &dist, const double x)
 {
-    if (dist.var==0) {
+    if (dist.sd==0) {
         return ( fabs(x-dist.mean) < EPS )? 1.: 0;
     }
-    return exp( -0.5 * pow(x-dist.mean, 2) / dist.var ) / sqrt(2. * dist.var * M_PI);
+
+	float var = dist.sd * dist.sd;
+	
+    return exp( -0.5 * pow(x-dist.mean, 2) / var ) / (sqrt(2. * M_PI) * dist.sd );
 }
 
 ///
@@ -72,7 +75,7 @@ inline double getPdf(const Gaussian &dist, const double x)
 __host__
 inline double getSample(const Gaussian &dist)
 {
-    return box_muller((double)dist.mean, (double)sqrt(dist.var) );
+    return box_muller((double)dist.mean, (double)dist.sd );
 }
 
 ///
@@ -81,7 +84,7 @@ inline double getSample(const Gaussian &dist)
 __host__ __device__
 inline double getSample(const Gaussian &dist, thrust::default_random_engine &rng)
 {
-  thrust::random::normal_distribution<double> ndist(dist.mean, sqrt(dist.var) );
+  thrust::random::normal_distribution<double> ndist(dist.mean, dist.sd );
   return ndist(rng);
 }
 
@@ -114,11 +117,11 @@ namespace detail {
 __host__ __device__
 inline double getCdf(const Gaussian &dist, double x)
 {
-  if (dist.var==0) {
+  if (dist.sd==0) {
     return x >= dist.mean ? 1 : 0;
   }
   //return 0.5 * (1 + boost::math::erf((x - dist.mean) / (sqrt(2.*dist.var))));
-  return 0.5 * (1 + erf((x - dist.mean) / (sqrt(2.*dist.var))));
+  return 0.5 * (1 + erf((x - dist.mean) / (sqrt(2.) * dist.sd)));
 }
 
 ///
@@ -127,11 +130,11 @@ inline double getCdf(const Gaussian &dist, double x)
 __host__
 inline double getCdfPrecise(const Gaussian &dist, double x)
 {
-  if (dist.var==0) {
+  if (dist.sd==0) {
     return x >= dist.mean ? 1 : 0;
   }
   // TODO: need to implement on our own for Cuda to work
-  boost::math::normal_distribution<double> normal (dist.mean, sqrt(dist.var) );
+  boost::math::normal_distribution<double> normal (dist.mean, dist.sd );
   return boost::math::cdf<>(normal, x);
 }
 
@@ -145,7 +148,12 @@ inline std::ostream& operator<<(std::ostream& os, const Gaussian &dist)
     return os;
 }
 
-// ------------------------------------------------------------------------------
+__host__ __device__
+inline std::string getName(const Gaussian &x) {
+    return "Gaussian";
+}
+
+//-----------------------------------------------------------
 // Below defines Gaussian related arithmetics
 
 ///
@@ -154,8 +162,8 @@ inline std::ostream& operator<<(std::ostream& os, const Gaussian &dist)
 __host__ __device__
 inline Gaussian& operator-(Gaussian &x)
 {
-    x.mean = -x.mean;
-    return x;
+	x.mean = -x.mean;
+	return x;
 }
 
 ///
@@ -163,9 +171,9 @@ inline Gaussian& operator-(Gaussian &x)
 ///
 __host__ __device__
 inline Gaussian& operator+=(Gaussian &x, const Gaussian& rhs) {
-    x.mean += rhs.mean;
-    x.var += rhs.var;
-    return x;
+	x.mean += rhs.mean;
+	x.sd = sqrt(x.sd*x.sd + rhs.sd*rhs.sd);
+	return x;	
 }
 
 ///
@@ -173,8 +181,8 @@ inline Gaussian& operator+=(Gaussian &x, const Gaussian& rhs) {
 ///
 __host__ __device__
 inline Gaussian& operator+=(Gaussian &x, const double r) {
-    x.mean += r;
-    return x;
+	x.mean += r;
+	return x;
 }
 
 ///
@@ -182,10 +190,11 @@ inline Gaussian& operator+=(Gaussian &x, const double r) {
 ///
 __host__ __device__
 inline Gaussian& operator*=(Gaussian &x, const double r) {
-    x.mean *= r;
-    x.var *= r*r;
-    return x;
+	x.mean *= r;
+	x.sd = sqrt(x.sd*x.sd*r*r);
+	return x;
 }
+
 
 }  // namespace dist
 }  // namespace edda

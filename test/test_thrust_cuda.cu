@@ -14,7 +14,7 @@
 #include "distributions/gaussian.h"
 #include "core/interpolator.h"
 #include "test_common.h"
-#include "filters/random_sample_field.h"
+#include "core/thrust_random_sample.h"
 #include "distributions/gaussian_mixture.h"
 
 

@@ -18,3 +18,6 @@ Complete a generic data management framework so that in the future we can build 
 
 Project website
 https://sites.google.com/site/gravityvisdb/edda
+
+Class Structures
+https://rawgit.com/GRAVITYLab/edda/master/html/index.html

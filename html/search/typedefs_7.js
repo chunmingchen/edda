@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['vector3',['Vector3',['../namespaceedda.html#a42494897f5c4030485999c80c72ea1fa',1,'edda::Vector3()'],['../namespaceedda.html#a85fb595d837d493f208da6f010859b10',1,'edda::VECTOR3()']]],
-  ['vector4',['VECTOR4',['../namespaceedda.html#ae93d140330f286d94cd5daa9b4a4fd47',1,'edda::VECTOR4()'],['../namespaceedda.html#a40f524404274580cb165394a7ad59669',1,'edda::Vector4()']]]
+  ['rawarraytype',['RawArrayType',['../classedda_1_1GmmVtkDataArray.html#a2e7db86742898d8e251c4e8c64bb66af',1,'edda::GmmVtkDataArray']]],
+  ['real',['Real',['../namespaceedda.html#aaf50451f174934601d7a0c5a714f35ac',1,'edda']]],
+  ['realvaluewrapper',['RealValueWrapper',['../namespaceedda_1_1dist.html#a0463a1d2a03104f3478ce0359a34f45c',1,'edda::dist']]]
 ];

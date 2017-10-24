@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['selfdeviceptr',['SelfDevicePtr',['../classedda_1_1NdArray.html#aeee148104912a94ae7f9a52ddbf6b632',1,'edda::NdArray']]],
-  ['super_5ft',['super_t',['../classedda_1_1ndarray__iterator.html#af10246b4a1530457d9ac30f1a897df6c',1,'edda::ndarray_iterator']]]
+  ['pbitmapfileheader',['PBITMAPFILEHEADER',['../bmp__image_8h.html#ad416d6889f9e54036d81a3ccb3461290',1,'bmp_image.h']]],
+  ['pbitmapinfoheader',['PBITMAPINFOHEADER',['../bmp__image_8h.html#a17a11cc369b8290d453bd4b23334a3bf',1,'bmp_image.h']]],
+  ['pointinfo',['PointInfo',['../namespaceedda.html#a943d0c00e55b9d2ca21b97d3b218993d',1,'edda']]]
 ];

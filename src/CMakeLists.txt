@@ -11,10 +11,6 @@ set (SRC_DIRS
   io
 )
 
-if (EDDA_WITH_VTK OR EDDA_BUILD_PARAVIEW_PLUGINS)
-  set (SRC_DIRS ${SRC_DIRS} vtk)
-endif ()
-
 foreach (dir in ${SRC_DIRS})
   file(GLOB tmp ${dir}/*.cpp ${dir}/*.cu)
   list(APPEND SRC_FILES ${tmp})
@@ -35,9 +31,9 @@ endif ()
 ### for building shared library (BUILD_SHARED_LIBS=ON), otherwise this does nothing:
 target_link_libraries(${PROJECT_NAME} ${LINK_LIBS})
 
-set_target_properties (${PROJECT_NAME} PROPERTIES
-    DEBUG_OUTPUT_NAME "${PROJECT_NAME}_d"
-    RELEASE_OUTPUT_NAME "${PROJECT_NAME}")
+#set_target_properties (${PROJECT_NAME} PROPERTIES
+#    DEBUG_OUTPUT_NAME "${PROJECT_NAME}_d"
+#    RELEASE_OUTPUT_NAME "${PROJECT_NAME}")
 
 #install (
 #    DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/
@@ -52,8 +48,4 @@ endforeach()
 install (
     TARGETS ${PROJECT_NAME}
     DESTINATION lib/${PROJECT_NAME})
-
-if (EDDA_BUILD_PARAVIEW_PLUGINS)
-  add_subdirectory(vtk)
-endif ()
 

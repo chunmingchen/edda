@@ -573,6 +573,18 @@ void RegularCartesianGrid::boundaryIntersection(VECTOR3& intersectP,
 	}
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 //////////////////////////////////////////////////////////////////////////
 //																		//
 //	definition of Irregular CartesianGrid Class							//

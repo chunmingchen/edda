@@ -1,9 +1,15 @@
 var searchData=
 [
-  ['data',['data',['../classedda_1_1NdArray.html#ae08ff31a4c35850e2fa52619cd1b9e58',1,'edda::NdArray::data()'],['../classedda_1_1NdArray.html#adab41970261227bb8cbee61437668836',1,'edda::NdArray::data()']]],
-  ['datachanged',['DataChanged',['../classvtkSamplingArray.html#a9f659ba660b75566ee7b3a8734b207d4',1,'vtkSamplingArray::DataChanged()'],['../classeddaSamplingArray.html#a3a62c7477232aeb406a32069ca26198a',1,'eddaSamplingArray::DataChanged()']]],
-  ['datasamplingarray',['DataSamplingArray',['../classedda_1_1DataSamplingArray.html#a4da45b8109475832f7d573375e5b223f',1,'edda::DataSamplingArray']]],
-  ['dataset',['Dataset',['../classedda_1_1Dataset.html#a6435bda7663a40aecf2cab8ddf4dce86',1,'edda::Dataset']]],
-  ['dims',['dims',['../classedda_1_1NdArray.html#a4d7a4bab93f3633052353ebd2c7126b6',1,'edda::NdArray']]],
-  ['dot',['dot',['../namespaceedda.html#ac6eb0fa147f28e44295bbe3201c0281e',1,'edda::dot(const Vector3&lt; Real &gt; &amp;v0, const Vector3&lt; Real &gt; &amp;v1)'],['../namespaceedda.html#acbc60ac78a9972a32aa4a470f9174087',1,'edda::dot(const Vector4&lt; Real &gt; &amp;v0, const Vector4&lt; Real &gt; &amp;v1)']]]
+  ['eddacomputeem',['eddaComputeEM',['../namespaceedda.html#adf290c6f2f0638ac28e9c459293d674f',1,'edda']]],
+  ['eddacomputehistogram',['eddaComputeHistogram',['../namespaceedda.html#aa585d5f090e81748dbd4560a7e9e51e2',1,'edda::eddaComputeHistogram(float *dataArray, int nElement, const int _nBins, const float _minValue=1, const float _maxValue=-1)'],['../namespaceedda.html#a6a5def648aa6805218b5b43c71bdaeb6',1,'edda::eddaComputeHistogram(double *dataArray, int nElement, const int _nBins, const double _minValue=1, const double _maxValue=-1)']]],
+  ['eddacomputejointgmm',['eddaComputeJointGMM',['../namespaceedda.html#a56f6ad37e7d5ac9b859a6f24473c2800',1,'edda']]],
+  ['eddacomputejointhistogram',['eddaComputeJointHistogram',['../namespaceedda_1_1dist.html#a04c11decab6db9edf9983631f06ef510',1,'edda::dist']]],
+  ['eddarandomsamplefield',['eddaRandomSampleField',['../classeddaRandomSampleField.html#af3116d98cfbd7389115564e5a05d8536',1,'eddaRandomSampleField']]],
+  ['eddasamplingarray',['eddaSamplingArray',['../classeddaSamplingArray.html#a079ebab48c561b18292ad7df6dcde1b2',1,'eddaSamplingArray']]],
+  ['eddathreshold',['eddaThreshold',['../classeddaThreshold.html#a365803ea6b23e241f74ca61f5941956b',1,'eddaThreshold']]],
+  ['eddauncertainisocontour',['eddaUncertainIsocontour',['../classeddaUncertainIsocontour.html#ae4e870c0689ed7d50bdf21166706182b',1,'eddaUncertainIsocontour']]],
+  ['eddaupdategmmincremental',['eddaUpdateGMMIncremental',['../namespaceedda.html#ada3481b5e318feefa332d69f067f445c',1,'edda']]],
+  ['end',['end',['../classedda_1_1NdArray.html#a557ace637946af190e2631a9d59f48fb',1,'edda::NdArray::end()'],['../classedda_1_1GmmArray.html#a1ff8017b7fcd7cc7c82a7375d4d3da2d',1,'edda::GmmArray::end()'],['../classedda_1_1HistoArray.html#a821645de6dcf8001fc62578b120773d6',1,'edda::HistoArray::end()']]],
+  ['euler',['euler',['../classedda_1_1StreamTracer.html#a880892fada69bb3e36cbab4c7de1e29b',1,'edda::StreamTracer']]],
+  ['eval_5fgaussian_5fdensity',['eval_gaussian_density',['../namespaceedda.html#a9d438e50e5dc488e5d812cea23ac606a',1,'edda']]]
 ];

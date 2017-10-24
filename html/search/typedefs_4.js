@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pointinfo',['PointInfo',['../namespaceedda.html#a943d0c00e55b9d2ca21b97d3b218993d',1,'edda']]]
+  ['istuple',['IsTuple',['../classedda_1_1Tuple.html#a0959313ba74890d7b6910c5334bd5c21',1,'edda::Tuple']]]
 ];

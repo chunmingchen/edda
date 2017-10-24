@@ -2,8 +2,8 @@
 // Use of this source code is governed by a MIT-style license that can be
 // found in the LICENSE file.
 
-#ifndef INTERPOLATOR_H_
-#define INTERPOLATOR_H_
+#ifndef EDDA_INTERPOLATOR_H_
+#define EDDA_INTERPOLATOR_H_
 
 #include "tuple.h"
 

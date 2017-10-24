@@ -1,21 +1,7 @@
 var searchData=
 [
-  ['_7eabstractdataarray',['~AbstractDataArray',['../classedda_1_1AbstractDataArray.html#aa83756aa71cb59e3537e02795b8c8810',1,'edda::AbstractDataArray']]],
-  ['_7ecartesiangrid',['~CartesianGrid',['../classedda_1_1CartesianGrid.html#a2fdf7940fc29d204446d0d6480ef4c10',1,'edda::CartesianGrid']]],
-  ['_7edatasamplingarray',['~DataSamplingArray',['../classedda_1_1DataSamplingArray.html#a48ff8632fb766faafb8fcfcd12a73636',1,'edda::DataSamplingArray']]],
-  ['_7edataset',['~Dataset',['../classedda_1_1Dataset.html#a5173045ab90bbe2caa946c095a758d22',1,'edda::Dataset']]],
-  ['_7eeddarandomprobefilter',['~eddaRandomProbeFilter',['../classeddaRandomProbeFilter.html#aa0e3cd815bf24e3396bac4b6f49a41a9',1,'eddaRandomProbeFilter']]],
-  ['_7eeddarandomsamplefield',['~eddaRandomSampleField',['../classeddaRandomSampleField.html#ae90286e2863e54f07bce0eb0edf7bc48',1,'eddaRandomSampleField']]],
-  ['_7eeddasamplingarray',['~eddaSamplingArray',['../classeddaSamplingArray.html#a0dbdad926057f5eb28adaee958f9e540',1,'eddaSamplingArray']]],
-  ['_7eeddathreshold',['~eddaThreshold',['../classeddaThreshold.html#a2c91c92373ffd672422781819ea4342d',1,'eddaThreshold']]],
-  ['_7eeddauncertainisocontour',['~eddaUncertainIsocontour',['../classeddaUncertainIsocontour.html#af4cfdab36d73c447476db07036452231',1,'eddaUncertainIsocontour']]],
-  ['_7egmmvtkdataarray',['~GmmVtkDataArray',['../classedda_1_1GmmVtkDataArray.html#a1316dfe2b3ac642ed6cd718619af4587',1,'edda::GmmVtkDataArray']]],
-  ['_7egrid',['~Grid',['../classedda_1_1Grid.html#a72f84115bb6a22fa18149e2c46141bed',1,'edda::Grid']]],
-  ['_7endarray',['~NdArray',['../classedda_1_1NdArray.html#a44cc9e0b42ae2534c2845be9bac54243',1,'edda::NdArray::~NdArray()'],['../classedda_1_1NdArray.html#a44cc9e0b42ae2534c2845be9bac54243',1,'edda::NdArray::~NdArray()']]],
-  ['_7eregularcartesiangrid',['~RegularCartesianGrid',['../classedda_1_1RegularCartesianGrid.html#a07680966dceebd2c70513e483058ec48',1,'edda::RegularCartesianGrid']]],
-  ['_7escalararray',['~ScalarArray',['../classedda_1_1ScalarArray.html#afbe5f3d3c5372d129ed274d3f377c790',1,'edda::ScalarArray']]],
-  ['_7evectorarray',['~VectorArray',['../classedda_1_1VectorArray.html#a70d077e16628af4ad2af2f517938b393',1,'edda::VectorArray']]],
-  ['_7evtkcompositedataprobefilter',['~vtkCompositeDataProbeFilter',['../classvtkCompositeUncertainIsocontour.html#a27995e83da016c5383664ee72f81ca9f',1,'vtkCompositeUncertainIsocontour']]],
-  ['_7evtkeddareader',['~vtkEddaReader',['../classvtkEddaReader.html#a81c16719feb51cbb9d9b2c16042f47a5',1,'vtkEddaReader']]],
-  ['_7evtksamplingarray',['~vtkSamplingArray',['../classvtkSamplingArray.html#ac4a08f30d4eb37854a6079a0105209dc',1,'vtkSamplingArray']]]
+  ['x',['x',['../structedda_1_1dist_1_1detail_1_1__getPdf.html#a19d61540f816dd232115080e8d9e245c',1,'edda::dist::detail::_getPdf::x()'],['../structedda_1_1dist_1_1detail_1_1__getCdf.html#a326ad483b659e24b2208adde995108e5',1,'edda::dist::detail::_getCdf::x()'],['../structedda_1_1dist_1_1detail_1_1__getJointPdf.html#a70e558e11ffb133930469d8f615ac3c7',1,'edda::dist::detail::_getJointPdf::x()'],['../classedda_1_1Vector_3_01Real_00_013_01_4.html#a119f5b1551d2abfd3b5109abe4c0f1eb',1,'edda::Vector&lt; Real, 3 &gt;::x()'],['../classedda_1_1Vector_3_01Real_00_014_01_4.html#a3eede0379e7658c343b2dfc09463fdda',1,'edda::Vector&lt; Real, 4 &gt;::x()']]],
+  ['xcelldim',['xcelldim',['../classedda_1_1CartesianGrid.html#ab177745dd86d88eb84d67500748e2c00',1,'edda::CartesianGrid']]],
+  ['xdim',['xdim',['../classedda_1_1CartesianGrid.html#aeb7c6fb8918008f17898bbffd2afdb8b',1,'edda::CartesianGrid']]],
+  ['xsize',['xSize',['../classedda_1_1DistributionModeler.html#a92d498bbd832055ef0c8adb693db962b',1,'edda::DistributionModeler::xSize()'],['../classedda_1_1VecDistrModeler.html#aac9fad2bd21019d3ded852c3b516460f',1,'edda::VecDistrModeler::xSize()']]]
 ];

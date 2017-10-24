@@ -2,15 +2,24 @@
 # Use of this source code is governed by a MIT-style license that can be
 # found in the LICENSE file.
 
+project(edda_examples)
+
 set(sources
-  #uncertainIsocontour.cu
-  #streamlineGaussian.cu
+  #gmm_raw2vtk.cpp  
+  #loadScalarDataset.cpp
+  #loadCurvilinearDataset.cpp
+  distrModelerExample.cpp
+  VectorDistrModelerExample
+  scalarIOExample.cpp
+  vectorIOExample.cpp
+  #jointGMMIOExample.cpp
 )
+
 
 include_directories(${CMAKE_SOURCE_DIR}/src)
 
 # Force compile .cu files
-add_definitions("-x c++")  
+#add_definitions("-x c++")
 
 
 foreach (file ${sources})
@@ -27,7 +36,4 @@ foreach (file ${sources})
   target_link_libraries ( ${name} edda ${LINK_LIBS} )
 endforeach ()
 
-if (EDDA_WITH_VTK)
-  add_subdirectory (vtk)
-endif ()
 

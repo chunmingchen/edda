@@ -10,8 +10,4 @@
 #cmakedefine OS_MACOSX
 #cmakedefine OS_WIN
 
-#include "common.h"
-#include "distributions/distribution.h"
-#include "distributions/gaussian_mixture.h"
-
 #endif  // EDDA_H_

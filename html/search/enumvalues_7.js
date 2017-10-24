@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['weighted_5fsum',['WEIGHTED_SUM',['../namespaceedda.html#a431337c36fb50c77e958d8dfae855781a5cd0cc87f7789a6f7120f6f4f55594ed',1,'edda']]]
+  ['success',['SUCCESS',['../namespaceedda.html#aa0433980f2b7cbba42ff2234832b9716a530eabd3f34ef67fe4ab833f2bae1622',1,'edda']]]
 ];

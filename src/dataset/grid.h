@@ -8,8 +8,8 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 
-#ifndef _GRID_H_
-#define _GRID_H_
+#ifndef EDDA_GRID_H_
+#define EDDA_GRID_H_
 
 #include <cassert>
 #include <vector>
@@ -17,6 +17,7 @@
 #include "common.h"
 #include "core/interpolator.h"
 #include "core/vector_matrix.h"
+#include "edda_export.h"
 //#include "Cell.h"
 
 namespace edda{
@@ -25,7 +26,7 @@ enum CellType {
 	TRIANGLE,
 	CUBE,
 	POLYGON,
-	TETRAHEDRON
+	TETRAHEDRON,
 };
 
 enum InterpType {
@@ -64,7 +65,7 @@ typedef struct PointInfo
 /// \brief base class for grid
 ///
 //////////////////////////////////////////////////////////////////////////
-class Grid
+class EDDA_EXPORT Grid
 {
 public:
     Grid() {}
@@ -114,7 +115,7 @@ protected:
 /// \brief Cartesian Grid (Regular and Irregular)
 ///
 //////////////////////////////////////////////////////////////////////////
-class CartesianGrid : public Grid
+class EDDA_EXPORT CartesianGrid : public Grid
 {
 public:
   // constructor and destructor
@@ -181,7 +182,7 @@ protected:
 // map coordinates in computational space to physical space
 #define UCGridPhy2Comp(x, y, f) (((x) - (y))*(f))
 
-class RegularCartesianGrid : public CartesianGrid
+class EDDA_EXPORT RegularCartesianGrid : public CartesianGrid
 {
 private:
   float mappingFactorX;				// mapping from physical space to computational space
@@ -275,6 +276,7 @@ public:
 };
 
 */ 
+
 
 #if 0
 //////////////////////////////////////////////////////////////////////////

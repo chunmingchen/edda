@@ -38,7 +38,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
-      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -73,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(12)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -107,9 +106,8 @@ Inheritance diagram for edda::AbstractDataArray:</div>
   <img src="classedda_1_1AbstractDataArray.png" usemap="#edda::AbstractDataArray_map" alt=""/>
   <map id="edda::AbstractDataArray_map" name="edda::AbstractDataArray_map">
 <area href="classedda_1_1DataSamplingArray.html" title="Take a distribution data array and output a sample. " alt="edda::DataSamplingArray" shape="rect" coords="0,56,166,80"/>
-<area href="classedda_1_1GmmVtkDataArray.html" title="GmmVtkDataArray implements AbstractDataArray. It holds vtkDataArrys and returns GMMs with interleaved..." alt="edda::GmmVtkDataArray" shape="rect" coords="176,56,342,80"/>
-<area href="classedda_1_1ScalarArray.html" title="A simple implementation of DataArray. " alt="edda::ScalarArray&lt; T &gt;" shape="rect" coords="352,56,518,80"/>
-<area href="classedda_1_1VectorArray.html" alt="edda::VectorArray&lt; T, N &gt;" shape="rect" coords="528,56,694,80"/>
+<area href="classedda_1_1ScalarArray.html" title="A simple implementation of DataArray. " alt="edda::ScalarArray&lt; T &gt;" shape="rect" coords="176,56,342,80"/>
+<area href="classedda_1_1VectorArray.html" alt="edda::VectorArray&lt; T, N &gt;" shape="rect" coords="352,56,518,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -193,7 +191,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <p>Note: We don't return reference because the return data can be derived from the original data. Use <a class="el" href="classedda_1_1AbstractDataArray.html#aade6731b6b68fb94fe2369eba637d43b">setItem()</a> to change the data content. </p>
 
-<p>Implemented in <a class="el" href="classedda_1_1VectorArray.html#a73bd4bad60609b662b61c818cc9517b2">edda::VectorArray&lt; T, N &gt;</a>, <a class="el" href="classedda_1_1GmmVtkDataArray.html#a715a8a0ae4570b861f1f22ced0a6743f">edda::GmmVtkDataArray</a>, <a class="el" href="classedda_1_1DataSamplingArray.html#aa0e3e26e84c38c8252cdcddcca3e1168">edda::DataSamplingArray</a>, and <a class="el" href="classedda_1_1ScalarArray.html#a26506ab978225aae83454a8f7a000163">edda::ScalarArray&lt; T &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classedda_1_1VectorArray.html#a73bd4bad60609b662b61c818cc9517b2">edda::VectorArray&lt; T, N &gt;</a>, <a class="el" href="classedda_1_1DataSamplingArray.html#aa0e3e26e84c38c8252cdcddcca3e1168">edda::DataSamplingArray</a>, and <a class="el" href="classedda_1_1ScalarArray.html#a26506ab978225aae83454a8f7a000163">edda::ScalarArray&lt; T &gt;</a>.</p>
 
 </div>
 </div>
@@ -219,7 +217,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Get the number of elements </p>
 
-<p>Implemented in <a class="el" href="classedda_1_1VectorArray.html#a058c81b9c6693539b0166e8a36365612">edda::VectorArray&lt; T, N &gt;</a>, <a class="el" href="classedda_1_1GmmVtkDataArray.html#ae253c523c5d1488fb18214cfe4df4c78">edda::GmmVtkDataArray</a>, <a class="el" href="classedda_1_1ScalarArray.html#ab5d941d19575ba5a0eac6c700cb81f1d">edda::ScalarArray&lt; T &gt;</a>, and <a class="el" href="classedda_1_1DataSamplingArray.html#aedd8686f8f05792f862e8537e6e5bba5">edda::DataSamplingArray</a>.</p>
+<p>Implemented in <a class="el" href="classedda_1_1VectorArray.html#a058c81b9c6693539b0166e8a36365612">edda::VectorArray&lt; T, N &gt;</a>, <a class="el" href="classedda_1_1ScalarArray.html#ab5d941d19575ba5a0eac6c700cb81f1d">edda::ScalarArray&lt; T &gt;</a>, and <a class="el" href="classedda_1_1DataSamplingArray.html#aedd8686f8f05792f862e8537e6e5bba5">edda::DataSamplingArray</a>.</p>
 
 </div>
 </div>
@@ -245,7 +243,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Get the number of element components. This is used for elements in variable-length vector or matrix. </p>
 
-<p>Implemented in <a class="el" href="classedda_1_1VectorArray.html#ab55dfed7c680f323c0990c35ee96abfa">edda::VectorArray&lt; T, N &gt;</a>, <a class="el" href="classedda_1_1GmmVtkDataArray.html#a52a2a8b8afa15807ec7ca859b712e66b">edda::GmmVtkDataArray</a>, <a class="el" href="classedda_1_1ScalarArray.html#ab5c90ef4f106ee6b827c53d708f12747">edda::ScalarArray&lt; T &gt;</a>, and <a class="el" href="classedda_1_1DataSamplingArray.html#a748c18ccfc9b23d8d8d95cfda3188820">edda::DataSamplingArray</a>.</p>
+<p>Implemented in <a class="el" href="classedda_1_1VectorArray.html#ab55dfed7c680f323c0990c35ee96abfa">edda::VectorArray&lt; T, N &gt;</a>, <a class="el" href="classedda_1_1ScalarArray.html#ab5c90ef4f106ee6b827c53d708f12747">edda::ScalarArray&lt; T &gt;</a>, and <a class="el" href="classedda_1_1DataSamplingArray.html#a748c18ccfc9b23d8d8d95cfda3188820">edda::DataSamplingArray</a>.</p>
 
 </div>
 </div>
@@ -271,7 +269,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Get the array </p>
 
-<p>Implemented in <a class="el" href="classedda_1_1VectorArray.html#a52ebb5d335b08eeb7f0f965ba4ea11a4">edda::VectorArray&lt; T, N &gt;</a>, <a class="el" href="classedda_1_1GmmVtkDataArray.html#a01d173f90474b4af8ba5a56ebeb1a3f7">edda::GmmVtkDataArray</a>, <a class="el" href="classedda_1_1DataSamplingArray.html#a6aae3e35466acb5dc659c2dbbab5c523">edda::DataSamplingArray</a>, and <a class="el" href="classedda_1_1ScalarArray.html#aeff0d890ae2f1e024c175bbcec21f00c">edda::ScalarArray&lt; T &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classedda_1_1VectorArray.html#a52ebb5d335b08eeb7f0f965ba4ea11a4">edda::VectorArray&lt; T, N &gt;</a>, <a class="el" href="classedda_1_1DataSamplingArray.html#a6aae3e35466acb5dc659c2dbbab5c523">edda::DataSamplingArray</a>, and <a class="el" href="classedda_1_1ScalarArray.html#aeff0d890ae2f1e024c175bbcec21f00c">edda::ScalarArray&lt; T &gt;</a>.</p>
 
 </div>
 </div>
@@ -297,7 +295,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classedda_1_1VectorArray.html#ae47a8e6c9d3621ef5588b3b2a831f61f">edda::VectorArray&lt; T, N &gt;</a>, <a class="el" href="classedda_1_1GmmVtkDataArray.html#a42f57d6c03d51f57b73921c94cdae1e0">edda::GmmVtkDataArray</a>, <a class="el" href="classedda_1_1ScalarArray.html#a7fa33454d6e995bf6d7edbf7aa029096">edda::ScalarArray&lt; T &gt;</a>, and <a class="el" href="classedda_1_1DataSamplingArray.html#a92f7b99b222f6ddf935fc0ccd5d52d58">edda::DataSamplingArray</a>.</p>
+<p>Implemented in <a class="el" href="classedda_1_1VectorArray.html#ae47a8e6c9d3621ef5588b3b2a831f61f">edda::VectorArray&lt; T, N &gt;</a>, <a class="el" href="classedda_1_1ScalarArray.html#a7fa33454d6e995bf6d7edbf7aa029096">edda::ScalarArray&lt; T &gt;</a>, and <a class="el" href="classedda_1_1DataSamplingArray.html#a92f7b99b222f6ddf935fc0ccd5d52d58">edda::DataSamplingArray</a>.</p>
 
 </div>
 </div>
@@ -323,7 +321,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classedda_1_1VectorArray.html#a3e1570929f1aec18d4883b86916b896b">edda::VectorArray&lt; T, N &gt;</a>, <a class="el" href="classedda_1_1GmmVtkDataArray.html#a32281833ca01307e505282a71c50a00c">edda::GmmVtkDataArray</a>, <a class="el" href="classedda_1_1ScalarArray.html#a324332d06930633966ee4db81f1a47a5">edda::ScalarArray&lt; T &gt;</a>, and <a class="el" href="classedda_1_1DataSamplingArray.html#a5efeb57907431fa9ee9f755ac5bd7849">edda::DataSamplingArray</a>.</p>
+<p>Implemented in <a class="el" href="classedda_1_1VectorArray.html#a3e1570929f1aec18d4883b86916b896b">edda::VectorArray&lt; T, N &gt;</a>, <a class="el" href="classedda_1_1ScalarArray.html#a324332d06930633966ee4db81f1a47a5">edda::ScalarArray&lt; T &gt;</a>, and <a class="el" href="classedda_1_1DataSamplingArray.html#a5efeb57907431fa9ee9f755ac5bd7849">edda::DataSamplingArray</a>.</p>
 
 </div>
 </div>
@@ -366,7 +364,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Set data at the given index </p>
 
-<p>Implemented in <a class="el" href="classedda_1_1VectorArray.html#a0e5cf62545fbeb841f3796714e1cb5a2">edda::VectorArray&lt; T, N &gt;</a>, <a class="el" href="classedda_1_1GmmVtkDataArray.html#a72d14608d2fd1081d9597241768ebf1c">edda::GmmVtkDataArray</a>, <a class="el" href="classedda_1_1DataSamplingArray.html#a4bbc69bc61d7ea504160a1c4f9631aec">edda::DataSamplingArray</a>, and <a class="el" href="classedda_1_1ScalarArray.html#a5e8fb8dae54a82a9996dd43c2068c69c">edda::ScalarArray&lt; T &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classedda_1_1VectorArray.html#a0e5cf62545fbeb841f3796714e1cb5a2">edda::VectorArray&lt; T, N &gt;</a>, <a class="el" href="classedda_1_1DataSamplingArray.html#a4bbc69bc61d7ea504160a1c4f9631aec">edda::DataSamplingArray</a>, and <a class="el" href="classedda_1_1ScalarArray.html#a5e8fb8dae54a82a9996dd43c2068c69c">edda::ScalarArray&lt; T &gt;</a>.</p>
 
 </div>
 </div>
@@ -376,7 +374,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 15 2016 16:08:33 for EDDA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 13 2016 02:50:48 for EDDA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -12,9 +12,10 @@
 //              01-2016         C-M Chen
 //////////////////////////////////////////////////////////////////////////
 
-#ifndef _VECTOR_MATRIX_H_
-#define _VECTOR_MATRIX_H_
+#ifndef EDDA_VECTOR_MATRIX_H_
+#define EDDA_VECTOR_MATRIX_H_
 
+#include <algorithm>
 #include <cmath>
 #include "common.h"
 #include "tuple.h"
@@ -42,8 +43,10 @@ public :
     bool operator ==(const Vector<Real2, N> &v) const {
         for (int i=0; i<N; i++)
         {
-            if (fabs(vec[0]-v(0)) >= EPS )
-                return false;
+			if (fabs(vec[i] - v[i]) >= EPS)
+				return false;
+			//if (fabs(vec[0]-v(0)) >= EPS )
+            //    return false;
         }
         return true;
     }
@@ -83,6 +86,12 @@ public :
         for (int i = 0; i < this->getLen(); i++)
             if (vec[i]>1.0) vec[i] = 1.0;
     }
+
+	void Zero()
+	{
+		for (int i = 0; i < this->getLen(); i++)
+			vec[i] = 0.0;
+	}
 };
 
 /// \brief  Specialization of Vector3 for higher performance.
@@ -107,9 +116,12 @@ public:
 
     template<typename Real2>
     bool operator ==(const Vector<Real2, 3>& v) const {
-        return (fabs(vec[0]-v(0)) < EPS &&
-                fabs(vec[1]-v(1)) < EPS &&
-                fabs(vec[2]-v(2)) < EPS);
+        //return (fabs(vec[0]-v(0)) < EPS &&
+        //        fabs(vec[1]-v(1)) < EPS &&
+        //        fabs(vec[2]-v(2)) < EPS);
+		return (fabs(vec[0] - v[0]) < EPS &&
+			fabs(vec[1] - v[1]) < EPS &&
+			fabs(vec[2] - v[2]) < EPS);
     }
     // get magnitude
     double getMag() const { return sqrt(vec[0]*vec[0] + vec[1]*vec[1] + vec[2]*vec[2]);  }
@@ -121,6 +133,11 @@ public:
     Vector<Real, 3> operator*=(Real x) { vec[0]*=x; vec[1]*=x; vec[2]*=x; return *this; }
     Vector<Real, 3> operator+=(Vector<Real, 3> x) { vec[0]+=x[0]; vec[1]+=x[1]; vec[2]+=x[2]; return *this; }
     Vector<Real, 3> operator*=(Vector<Real, 3> x) { vec[0]*=x[0]; vec[1]*=x[1]; vec[2]*=x[2]; return *this; }
+
+	void Zero()                                  // make zero vector
+	{
+		vec[0] = vec[1] = vec[2] = 0.0;
+	};
 };
 
 /// \brief Specialization of Vector4 for higher performance
@@ -143,10 +160,14 @@ public :
 
     template <typename Real2>
     bool operator ==(const Vector<Real2, 4>& v) const {
-        return (fabs(vec[0]-v(0)) < EPS &&
-                fabs(vec[1]-v(1)) < EPS &&
-                fabs(vec[2]-v(2)) < EPS &&
-                fabs(vec[3]-v(3)) < EPS);
+        //return (fabs(vec[0]-v(0)) < EPS &&
+        //        fabs(vec[1]-v(1)) < EPS &&
+        //        fabs(vec[2]-v(2)) < EPS &&
+        //        fabs(vec[3]-v(3)) < EPS);
+		return (fabs(vec[0] - v[0]) < EPS &&
+			fabs(vec[1] - v[1]) < EPS &&
+			fabs(vec[2] - v[2]) < EPS &&
+			fabs(vec[3] - v[3]) < EPS);
     }
     // get magnitude
     double getMag() const { return sqrt(vec[0]*vec[0] + vec[1]*vec[1] + vec[2]*vec[2] + vec[3]*vec[3]);  }
@@ -165,6 +186,11 @@ public :
         for (int i = 0; i < this->getLen(); i++)
             if (vec[i]>1.0) vec[i] = 1.0;
     }
+
+	void Zero()                                  // make zero vector
+	{
+		vec[0] = vec[1] = vec[2] = vec[3] = 0.0;
+	};
 };
 
 template<typename Real> using Vector3 = Vector<Real, 3> ;
@@ -228,41 +254,43 @@ typedef Vector3<float>  VECTOR3;
 typedef Vector4<float>  VECTOR4;
 
 
-#if 0
+//////////////  This class is used in OSUFlow and is defined in VectorMatrix.h for CurvilinearGrid and IrregularGrid ////////////////
 //////////////////////////////////////////////////////////////////////////
 // 3d matrix
 //////////////////////////////////////////////////////////////////////////
 class MATRIX3
 {
 private :
-    Vector3 mat[3];       // a vector represents each matrix row
+	VECTOR3 mat[3];       // a vector represents each matrix row
 
 public :
 
 	MATRIX3()                                    // constructor
 	{	Identity(); };
-    MATRIX3(const Vector3 & v0, const Vector3 & v1, const Vector3 & v2)
+	MATRIX3(const VECTOR3 & v0, const VECTOR3 & v1, const VECTOR3 & v2)
 	{	mat[0] = v0; mat[1] = v1; mat[2] = v2; };  // constructor
 	int Dimension() const
 	{	return 3; };
-    Vector3 & operator [](const int i)           // index row i
+	VECTOR3 & operator [](const int i)           // index row i
 	{	return(mat[i]); };
 	// Note: reference row i, column j of MATRIX3 m0 as m0[i][j] (not m0[i,j])
-    Vector3 operator()(const int i) const        // return row i
+	VECTOR3 operator()(const int i) const        // return row i
 	{	return(mat[i]); };
 	float operator ()(const int i, const int j) const
-	{	return(mat[i](j)); };                    // return element (i,j)
+	{	return(mat[i][j]); };                    // return element (i,j)
 	MATRIX3 & operator =(const MATRIX3 & m0)     // copy matrix m0
-	{	mat[0] = m0(0); mat[1] = m0(1); mat[2] = m0(2);
-	return(*this); };
+	{	mat[0] = m0(0); mat[1] = m0(1); mat[2] = m0(2);	return(*this); };
+	
 	void Identity();                             // set to identity
-
 	float det();	// determinant of the matrix
-
 	int inverse( MATRIX3& m) ;//added by lijie to handle curvilinear grid
 	MATRIX3 transpose();//added by lijie to handle curvilinear grid
 };
 
+//currently only uncomment this one, with others commented below
+VECTOR3 operator *(const MATRIX3 & m0, const VECTOR3 & v0); // return m0 * v0
+
+#if 0
 //////////////////////////////////////////////////////////////////////////
 // 4d matrix
 //////////////////////////////////////////////////////////////////////////
@@ -390,7 +418,6 @@ MATRIX3 operator -(const MATRIX3 & m0, const MATRIX3 & m1); // return m0 - m1
 MATRIX3 operator *(const MATRIX3 & m0, const MATRIX3 & m1); // return m0 * m1
 MATRIX3 operator *(const float x0, const MATRIX3 & m0);    // return x0 * m0
 MATRIX3 operator *(const MATRIX3 & m0, const float x0);    // return m0 * x0
-Vector3 operator *(const MATRIX3 & m0, const Vector3 & v0); // return m0 * v0
 Vector3 operator *(const Vector3 & v0, const MATRIX3 & m0); // return v0 * m0
 
 //************************
